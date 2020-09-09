@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Some Parts of Code was Copied
+
+This code was started from scretch in the Angular version 10.
+Some parts of this code were copied from Github: https://github.com/danvitoriano/shopping-cart-angular9
