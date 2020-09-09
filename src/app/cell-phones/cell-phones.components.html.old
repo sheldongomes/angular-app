@@ -1,0 +1,57 @@
+<!-- *ngFor -->
+<div *ngFor="let phone of phones; index as productId">
+
+  <h3>
+    <!-- Property binding [ ] -->
+    <!-- router link -->
+    <a [title]="phone.name + ' details'" [routerLink]="['/phones', productId]">
+      <!-- Interpolation {{ }} -->
+      {{ phone.name }}
+    </a>
+  </h3>
+
+  <!-- *ngIf -->
+  <p *ngIf="phone.description">
+    Description: {{ phone.description }}
+  </p>
+
+  <!-- Event binding ( ) -->
+   <button (click)="share()">
+    Share
+  </button>
+
+  <app-alerts [phone]="phone" (notify)="onNotify()">
+  </app-alerts>
+
+</div> 
+
+
+
+<h2>Phones</h2>
+
+<div *ngFor="let phone of phones; index as productId" class="column">
+  {{ phone.name }}
+    <mat-grid-list>
+    <mat-card class="example-card">
+        <mat-card-header>
+          <!--<div mat-card-avatar class="example-header-image"></div>-->
+          <mat-card-title *ngIf="phone.name">{{ phone.name }}</mat-card-title>
+          <mat-card-subtitle>Click in explore button to find a new cell phone</mat-card-subtitle>
+        </mat-card-header>
+        <div class="images">
+        <img mat-card-image *ngIf="phone.link" src= {{phone.link}} alt="Photo of a Shiba Inu">
+        </div>
+        <div class="textcontainer">
+        <mat-card-content>
+          <p *ngIf="phone.description">
+            Description: {{ phone.description }} 
+          </p>
+        </mat-card-content>
+        </div>
+        <mat-card-actions>
+          <button mat-button (click)="cellPhones()">EXPLORE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-list>
+</div>
