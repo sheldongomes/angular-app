@@ -9,7 +9,9 @@ import { CartService } from '../cart.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
+  
   phones;
+
   constructor(
     private route: ActivatedRoute,
     private cartService: CartService
@@ -21,7 +23,7 @@ export class ProductDetailsComponent implements OnInit {
     });
   }
 
-  addToCart(product) {
+  addToCart(phones) {
     window.alert('Your product has been added to the cart!');
     this.cartService.addToCart(phones);
   }
