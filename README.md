@@ -28,5 +28,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Some Parts of Code was Copied
 
-This code was started from scretch in the Angular version 10.
+This code was started from scratch in the Angular version 10.
 Some parts of this code were copied from Github: https://github.com/danvitoriano/shopping-cart-angular9
