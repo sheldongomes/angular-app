@@ -1,7 +1,26 @@
-<h2>Phones</h2>
+<!-- *ngFor -->
+<div *ngFor="let phone of phones; index as productId">
 
-<ul>
-  <li *ngFor="let phone of phones | async">
-    <contact-card [phone]="phones"></contact-card>
-  </li>
-</ul>
+  <h3>
+    <!-- Property binding [ ] -->
+    <!-- router link -->
+    <a [title]="phone.name + ' details'" [routerLink]="['/phones', productId]">
+      <!-- Interpolation {{ }} -->
+      {{ phone.name }}
+    </a>
+  </h3>
+
+  <!-- *ngIf -->
+  <p *ngIf="phone.description">
+    Description: {{ phone.description }}
+  </p>
+
+  <!-- Event binding ( ) -->
+   <button (click)="share()">
+    Share
+  </button>
+
+  <app-alerts [phone]="phone" (notify)="onNotify()">
+  </app-alerts>
+
+</div> 

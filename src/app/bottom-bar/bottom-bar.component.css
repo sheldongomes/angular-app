@@ -1,0 +1,17 @@
+.app-bottom-bar {
+    width: 100%;
+    height: 68px;
+    bottom: 0;
+    background-color: #1976d2;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+  }
+  
+  .app-bottom-bar-h1 {
+    color: white;
+    margin: 0;
+  }

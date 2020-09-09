@@ -14,6 +14,11 @@ import { ComputersComponent } from './computers/computers.component';
 import { WatchesComponent } from './watches/watches.component';
 import { TabletsComponent } from './tablets/tablets.component';
 import { AlertsComponent } from './alerts/alerts.component';
+import { BottomBarComponent } from './bottom-bar/bottom-bar.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartComponent } from './cart/cart.component';
+import { ShippingComponent } from './shipping/shipping.component';
+import { CartService } from './cart.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,11 @@ import { AlertsComponent } from './alerts/alerts.component';
     CellPhonesComponent,
     ComputersComponent,
     WatchesComponent,
-    AlertsComponent
+    AlertsComponent,
+    BottomBarComponent,
+    ProductDetailsComponent,
+    CartComponent,
+    ShippingComponent
   ],
   imports: [
     BrowserModule,
@@ -37,11 +46,13 @@ import { AlertsComponent } from './alerts/alerts.component';
       { path: 'cell-phones', component: CellPhonesComponent},
       { path: 'computers', component: ComputersComponent},
       { path: 'watches', component: WatchesComponent},
-      { path: 'tablets', component: TabletsComponent}
-
+      { path: 'tablets', component: TabletsComponent},
+      { path: 'phones/:productId', component: ProductDetailsComponent },
+      { path: 'cart', component: CartComponent},
+      { path: 'shipping', component: ShippingComponent }
     ])
   ],
-  providers: [],
+  providers: [CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
